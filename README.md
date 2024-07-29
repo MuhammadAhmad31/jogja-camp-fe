@@ -63,7 +63,7 @@ Test Layout Page
 
 Navigate to:
 
-http://localhost:3000/test-test-layout
+http://localhost:3000/test-layout
 
 Description: This page demonstrates the layout with different arrangements for buttons, text inputs, and dropdowns based on screen size.
 
@@ -71,7 +71,7 @@ Test Layout Form Page
 
 Navigate to:
 
-http://localhost:3000/test-test-layout-form
+http://localhost:3000/test-layout-form
 
 Description: This page shows a layout with various form elements arranged differently based on screen size, including three columns in a row for desktop, two rows for tablet, and three rows for mobile.
 
