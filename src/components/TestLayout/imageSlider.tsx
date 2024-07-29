@@ -1,6 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
-import Arrow from "./arrow";
+import React, { useRef, useEffect } from "react";
+import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 interface Image {
   id: number;
@@ -13,36 +14,40 @@ interface ImageSliderProps {
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-    prevArrow: (
-      <Arrow
-        className="slick-prev"
-        style={{ left: "15px" }}
-        onClick={() => {}}
-      />
-    ),
-    nextArrow: (
-      <Arrow
-        className="slick-next"
-        style={{ right: "15px" }}
-        onClick={() => {}}
-      />
-    ),
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const [slider, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    mode: "snap",
+    slides: { perView: 1 },
+  });
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      slider(sliderRef.current);
+    }
+  }, [slider]);
+
+  const handlePrev = () => {
+    instanceRef.current?.prev();
+  };
+
+  const handleNext = () => {
+    instanceRef.current?.next();
   };
 
   return (
     <div className="relative mb-8 overflow-hidden rounded-2xl">
-      <Slider {...settings}>
+      <div
+        ref={sliderRef}
+        className="keen-slider"
+        style={{ position: "relative", overflow: "hidden" }}
+      >
         {images.map((image) => (
-          <div key={image.id}>
+          <div
+            key={image.id}
+            className="flex-shrink-0 w-full keen-slider__slide"
+            style={{ minWidth: "100%" }}
+          >
             <img
               className="w-full h-auto rounded-2xl"
               src={image.src}
@@ -50,7 +55,19 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             />
           </div>
         ))}
-      </Slider>
+      </div>
+      <button
+        className="absolute z-10 transform -translate-y-1/2 left-4 top-1/2"
+        onClick={handlePrev}
+      >
+        <FaArrowLeft size={20} />
+      </button>
+      <button
+        className="absolute z-10 transform -translate-y-1/2 right-4 top-1/2"
+        onClick={handleNext}
+      >
+        <FaArrowRight size={20} />
+      </button>
     </div>
   );
 };
