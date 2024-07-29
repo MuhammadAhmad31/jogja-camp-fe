@@ -6,7 +6,7 @@ import content from "../dummyData/content.json";
 export const TestLayout: React.FC = () => {
   return (
     <>
-      <div className="px-4 py-4 sm:px-12 lg:px-32">
+      <div className="px-2 py-4 sm:px-12 lg:px-32">
         <ImageSlider images={images} />
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">

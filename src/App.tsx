@@ -5,6 +5,7 @@ import { Layout } from "./layouts/Layout";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TestLayout } from "./pages/TestLayout";
+import { TestLayoutForm } from "./pages/TestLayoutForm";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Layout>
           <Routes>
             <Route path="/test-layout" element={<TestLayout />} />
+            <Route path="/test-layout-form" element={<TestLayoutForm />} />
           </Routes>
         </Layout>
       </Router>
