@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Provide a brief description of your project here. Explain what it does and its purpose.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To get started with this project, follow these steps:
 
-### `npm test`
+1. **Clone the Repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   First, clone the repository to your local machine:
 
-### `npm run build`
+```bash
+git clone https://github.com/MuhammadAhmad31/jogja-camp-fe.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate into the project directory:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+ cd jogja-camp-fe
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Configuration**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+ cp .env.example .env
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. **Install dependencies**
 
-## Learn More
+```bash
+ npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Usage**
+   To run the project in development mode, use:
+
+```bash
+npm start
+
+```
+
+This will start the development server. You can view your application at http://localhost:3000 or the port specified in your configuration.
+
+**Accessing Pages**
+You can access and test the following pages of your application:
+
+Test Layout Page
+
+Navigate to:
+
+http://localhost:3000/test-test-layout
+
+Description: This page demonstrates the layout with different arrangements for buttons, text inputs, and dropdowns based on screen size.
+
+Test Layout Form Page
+
+Navigate to:
+
+http://localhost:3000/test-test-layout-form
+
+Description: This page shows a layout with various form elements arranged differently based on screen size, including three columns in a row for desktop, two rows for tablet, and three rows for mobile.
+
+Test Select Page
+
+Navigate to:
+
+http://localhost:3000/test-select
+
+Description: This page features a multi-level select form where users can select province, city, district, and village. The options are fetched from APIs, and the layout includes a filter section on the left and a content section on the right.
