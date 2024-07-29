@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
+import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 

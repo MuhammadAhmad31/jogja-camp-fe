@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Button } from "../components/TestLayoutForm/Button";
-import { Dropdown } from "../components/TestLayoutForm/Dropdown";
+import { Dropdown } from "../components/global/Dropdown";
 import { Input } from "../components/TestLayoutForm/Input";
 import debounce from "lodash.debounce";
 import { FaPlus, FaDownload, FaUpload } from "react-icons/fa";
